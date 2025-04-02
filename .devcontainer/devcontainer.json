@@ -1,6 +1,6 @@
 {
-  "name": "cf-worker-typescript-template",
-  "image": "mcr.microsoft.com/devcontainers/typescript-node:1-22-bullseye",
+  "name": "ollama-embedding-cf-workers-adapter",
+  "image": "mcr.microsoft.com/devcontainers/typescript-node:1-22-bookworm",
   "features": {
     "ghcr.io/devcontainers-extra/features/cloudflare-wrangler:1": {}
   },

@@ -16,6 +16,7 @@ export default ts.config(
       '**/dist/**',
       '**/node_modules/**',
       '**/.wrangler/**',
+      'worker-configuration.d.ts',
       'eslint.config.js',
     ],
   },

@@ -4,7 +4,7 @@
  */
 {
   "$schema": "node_modules/wrangler/config-schema.json",
-  "name": "cf-worker-typescript-template",
+  "name": "ollama-embedding-cf-workers-adapter",
   "main": "src/index.ts",
   "compatibility_date": "2025-01-29",
   "compatibility_flags": [
@@ -22,7 +22,10 @@
   "kv_namespaces": [],
   "d1_databases": [],
   // remove queues setting when enabling remote dev
-  "queues": {}
+  "queues": {},
+  "ai": {
+    "binding": "AI"
+  }
   /**
    * Smart Placement
    * Docs: https://developers.cloudflare.com/workers/configuration/smart-placement/#smart-placement

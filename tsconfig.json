@@ -8,13 +8,11 @@
     "lib": [
       "ESNext"
     ],
-    "types": [
-      "@cloudflare/workers-types/2023-07-01"
-    ],
     "jsx": "preserve",
     "jsxImportSource": "hono/jsx"
   },
   "include": [
-    "worker-configuration.d.ts"
+    "worker-configuration.d.ts",
+    "src/**/*.ts",
   ]
 }
