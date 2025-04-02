@@ -1,0 +1,59 @@
+{
+  "name": "cf-worker-typescript-template",
+  "image": "mcr.microsoft.com/devcontainers/typescript-node:1-22-bullseye",
+  "features": {
+    "ghcr.io/devcontainers-extra/features/cloudflare-wrangler:1": {}
+  },
+  "mounts": [
+    "source=pnpm_store,target=/home/node/.pnpm-store,type=volume"
+  ],
+  // Configure tool-specific properties.
+  "customizations": {
+    // Configure properties specific to VS Code.
+    "vscode": {
+      // Add the IDs of extensions you want installed when the container is created.
+      "extensions": [
+        "dbaeumer.vscode-eslint",
+        "formulahendry.auto-close-tag",
+        "formulahendry.auto-rename-tag",
+        "streetsidesoftware.code-spell-checker",
+        "GitHub.copilot",
+        "oderwat.indent-rainbow",
+        "bradlc.vscode-tailwindcss",
+        "wayou.vscode-todo-highlight",
+        "esbenp.prettier-vscode",
+      ],
+      "settings": {
+        "editor.bracketPairColorization.enabled": true,
+        "editor.guides.bracketPairs": true,
+        "editor.insertSpaces": true,
+        "editor.tabSize": 2,
+        "editor.formatOnPaste": true,
+        "editor.formatOnSave": true,
+        "editor.defaultFormatter": "esbenp.prettier-vscode",
+        "editor.codeActionsOnSave": {
+          "source.fixAll": "explicit"
+        },
+        "javascript.format.insertSpaceBeforeFunctionParenthesis": true,
+        "javascript.format.placeOpenBraceOnNewLineForControlBlocks": false,
+        "javascript.format.placeOpenBraceOnNewLineForFunctions": false,
+        "typescript.format.insertSpaceBeforeFunctionParenthesis": true,
+        "typescript.format.placeOpenBraceOnNewLineForControlBlocks": false,
+        "typescript.format.placeOpenBraceOnNewLineForFunctions": false,
+        "javascript.suggest.autoImports": true,
+        "javascript.preferences.importModuleSpecifier": "non-relative",
+        "typescript.suggest.autoImports": true,
+        "typescript.preferences.importModuleSpecifier": "non-relative",
+        "workbench.editor.enablePreview": true,
+      }
+    }
+  },
+  // Use 'forwardPorts' to make a list of ports inside the container available locally.
+  "forwardPorts": [
+    8787
+  ],
+  // Use 'postCreateCommand' to run commands after the container is created.
+  "postCreateCommand": "pnpm config set store-dir ~/.pnpm-store",
+  // Comment out to connect as root instead. More info: https://aka.ms/vscode-remote/containers/non-root.
+  "remoteUser": "node"
+}
